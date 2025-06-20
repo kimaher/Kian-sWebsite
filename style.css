@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  /* center container horizontally, align top vertically */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* align items to top */
+  height: 100vh;
+  margin-top: 50px;          /* space from top */
+}
+
+/* Make header and main side by side */
+header, main {
+  display: block;
+}
+
+/* Layout wrapper: since you can’t add a wrapper div, 
+   use body as container with flex children */
+header {
+  width: 250px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; optional if you want full height sidebar */
+}
+
+main {
+  flex: 1;
+  padding: 40px;
+  color: #333;
+  max-width: 700px;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  color: #222;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.education ul, .education ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Header box (name, img, description) */
+.headerbox {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Image */
+.headerbox img {
+  width: 200px;
+  height: 200px;
+  border-radius: 80%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Description paragraph */
+.headerbox p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Links */
+.header-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.header-links button {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #eaeaea;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.header-links button:hover {
+  background-color: #dcdcdc;
+  cursor: pointer;
+}
+
+/* Container styling */
+.projects {
+  padding: 30px;
+}
+
+/* Project heading */
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-list li {
+  counter-increment: project-counter;
+  margin-bottom: 30px;
+  padding-left: 8px;
+}
+
+.project-list {
+  list-style-type: decimal;
+  padding-left: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.project-list > li::marker {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Project titles */
+.project-list h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-list a {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  position: relative;
+  color: rgb(39, 39, 255);
+  text-decoration: none;
+}
+
+/* Bullet points */
+.project-list ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.project-list ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
